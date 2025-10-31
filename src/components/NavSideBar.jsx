@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { TbHomeFilled, TbBriefcaseFilled, TbUserCircle  } from 'react-icons/tb'
+import { TbUserFilled, TbHomeFilled, TbBriefcaseFilled } from 'react-icons/tb'
 import { Stack, UnstyledButton } from '@mantine/core';
 import styles from '../styles/NavSideBar.module.css';
 
 const icons = [
     { icon: TbHomeFilled, label: 'Home' },
-    { icon: TbBriefcaseFilled, label: 'Matter' }
-];
+    { icon: TbBriefcaseFilled, label: 'Matter' },
 
+];
 
 function SideBar({ icon: Icon, label, onClick, isActive }) {
     return (
@@ -37,12 +37,14 @@ export default function NavSideBar() {
                 </Stack>
             </div>
 
-            <Stack justify="center" gap={0} style={{ marginBottom: '1rem' }}>
-                <SideBar 
-                    icon={TbUserCircle} 
-                    label="Profile" 
-                />
-            </Stack>
+            <div className={styles.navbarFooter}>
+                <Stack justify="center">
+                    <SideBar
+                        icon={TbUserFilled} 
+                        label="Profile" 
+                    />
+                </Stack>
+            </div>
         </nav>
     );
 }

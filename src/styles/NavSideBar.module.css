@@ -17,6 +17,13 @@
   align-items: center;
 }
 
+.navbarFooter {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .link {
   width: 100%;
   height: 50px;
